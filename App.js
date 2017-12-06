@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { DrawerNavigator } from 'react-navigation';
-import Login from './src/Login';
-import Signup from './src/Signup';
+import Login from './src/screens/Login';
+import Signup from './src/screens/Signup';
 
 export default class App extends Component {
   render() {

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Image,  Text, KeyboardAvoidingView} from 'react-native';
-import SignupForm from './components/forms/SignupForm';
+import SignupForm from '../components/forms/SignupForm';
 
 export default class Signuo extends Component {
     render() {
         return (
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                     <View style={styles.logoContainer}>
-                        <Image style={styles.logo} source={require('./images/logo.jpeg')} />
+                        <Image style={styles.logo} source={require('../images/logo.jpeg')} />
                         <Text style={styles.title}  >
                             Best Place To Eat Big!
                         </Text>
