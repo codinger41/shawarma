@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { DrawerNavigator } from 'react-navigation';
-import Login from './src/Login'
+import Login from './src/Login';
+import Signup from './src/Signup';
 
 export default class App extends Component {
   render() {
@@ -12,7 +13,8 @@ export default class App extends Component {
 }
 
 const AppDrawerNavigator = DrawerNavigator({
-  Login: {screen: Login}
+  Login: {screen: Login},
+  SignUp: {screen: Signup}
 });
 
 const styles = StyleSheet.create({
