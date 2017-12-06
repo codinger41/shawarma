@@ -16,6 +16,7 @@ export default class SignupForm extends Component {
                     keyboardType="email-address"
                     autoCapitalize="none"
                     autoCorrect={false}
+                    underlineColorAndroid="rgba(0,0,0,0)"
                  />
                 <TextInput 
                     returnKeyType="next" 
@@ -25,18 +26,21 @@ export default class SignupForm extends Component {
                     keyboardType="email-address"
                     autoCapitalize="none"
                     autoCorrect={false}
+                    underlineColorAndroid="rgba(0,0,0,0)"
                  />
                 <TextInput 
                     returnKeyType="next" 
                     placeholder="Password" 
                     secureTextEntry style={styles.input}
                     ref={(input) => this.passwordInput = input}
+                    underlineColorAndroid="rgba(0,0,0,0)"
                 />
                 <TextInput 
                     returnKeyType="go" 
                     placeholder="Re-type Password" 
                     secureTextEntry style={styles.input}
                     ref={(input) => this.passwordInput = input}
+                    underlineColorAndroid="rgba(0,0,0,0)"
                 />
                 <TouchableOpacity style={styles.buttonContainer}>
                 <Text style={styles.buttonText} >
