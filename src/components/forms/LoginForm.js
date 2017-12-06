@@ -28,7 +28,7 @@ export default class LoginForm extends Component {
                     LOGIN
                 </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.buttonContainer2}>
                 <Text style={styles.buttonText} >
                     ENTER AS GUEST
                 </Text>
@@ -51,6 +51,11 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         backgroundColor: '#e74c3c',
+        paddingVertical: 10,
+        marginBottom: 10
+    },
+    buttonContainer2: {
+        backgroundColor: '#2ecc71',
         paddingVertical: 10,
         marginBottom: 10
     },
