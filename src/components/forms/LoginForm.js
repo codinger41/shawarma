@@ -47,17 +47,20 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255,255,255,0.2)',
         marginBottom: 20,
         color: '#fff',
-        paddingHorizontal:  10
+        paddingHorizontal:  10,
+        borderRadius: 35
     },
     buttonContainer: {
         backgroundColor: '#e74c3c',
         paddingVertical: 10,
-        marginBottom: 10
+        marginBottom: 10,
+        borderRadius: 35
     },
     buttonContainer2: {
         backgroundColor: '#2ecc71',
         paddingVertical: 10,
-        marginBottom: 10
+        marginBottom: 10,
+        borderRadius: 35
     },
     buttonText: {
         textAlign: 'center',
