@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   nav: {
-    backgroundColor: '#5D4037'
+    backgroundColor: '#5D4037',
+    paddingTop: 40
   }
 });
