@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Image,  Text, KeyboardAvoidingView} from 'react-native';
 import SignupForm from '../components/forms/SignupForm';
 
-export default class Signuo extends Component {
+export default class Signup extends Component {
     render() {
         return (
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
