@@ -7,7 +7,7 @@ export default class AdminLogin extends Component {
         return (
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                     <View style={styles.logoContainer}>
-                        <Image style={styles.logo} source={require('../images/logo.jpeg')} />
+                        <Image style={styles.logo} source={require('../images/logo.png')} />
                         <Text style={styles.title}  >
                             Best Place To Eat Big!
                         </Text>
