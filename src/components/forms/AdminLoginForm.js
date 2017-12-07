@@ -1,10 +1,10 @@
 import  React, { Component } from 'react';
 import { StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar } from 'react-native';
-
+import AdminLogin from '../../screens/AdminLogin';
 export default class AdminLoginForm extends Component {
     render(){
         return(
-            <View style={styles.container}>
+            <View style={styles.container1}>
                 <StatusBar
                     barStyle="light-content"
                 />
@@ -25,7 +25,7 @@ export default class AdminLoginForm extends Component {
                     ref={(input) => this.passwordInput = input}
                     underlineColorAndroid="rgba(0,0,0,0)"
                 />
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.buttoncontainer1}>
                 <Text style={styles.buttonText}>
                     LOGIN ADMIN
                 </Text>
@@ -36,7 +36,7 @@ export default class AdminLoginForm extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    container1: {
         padding: 20
     },
     input: {
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         paddingHorizontal:  10,
         borderRadius: 35
     },
-    buttonContainer: {
+    buttoncontainer1: {
         backgroundColor: '#e74c3c',
         paddingVertical: 10,
         marginBottom: 10,

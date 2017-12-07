@@ -1,31 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { DrawerNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 import Login from './src/screens/Login';
-import AdminLogin from './src/screens/AdminLogin';
 
-export default class App extends Component {
-  render() {
-    return (
-      <AppDrawerNavigator style={styles.nav}/>
-    );
-  }
-}
+import Dashboard from './src/screens/Dashboard';
 
-const AppDrawerNavigator = DrawerNavigator({
+const App = StackNavigator({
   Login: {screen: Login},
-  Administration: {screen: AdminLogin}
+  Dashboard: {screen: Dashboard},
+  
+},
+{
+  headerMode: 'none'
 });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  nav: {
-    backgroundColor: '#5D4037',
-    paddingTop: 40
-  }
-});
+export default App;

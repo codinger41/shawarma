@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image,  Text, KeyboardAvoidingView} from 'react-native';
-import LoginForm from '../components/forms/LoginForm'
+import  { StyleSheet, Image, View, TextInput, TouchableOpacity, Text, StatusBar, KeyboardAvoidingView }  from 'react-native';
 
 export default class Login extends Component {
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                     <View style={styles.logoContainer}>
@@ -13,7 +13,38 @@ export default class Login extends Component {
                         </Text>
                     </View>
                     <View style={styles.formContainer}>
-                        <LoginForm />
+                            <View style={styles.container1}>
+                            <StatusBar
+                                barStyle="light-content"
+                            />
+                            <TextInput 
+                                returnKeyType="next" 
+                                placeholder="Username or Email" 
+                                style={styles.input}
+                                onSubmitEditing={() => this.passwordInput.focus()}
+                                keyboardType="email-address"
+                                autoCapitalize="none"
+                                autoCorrect={false}
+                                underlineColorAndroid="rgba(0,0,0,0)"
+                            />
+                            <TextInput 
+                                returnKeyType="go" 
+                                placeholder="Password" 
+                                secureTextEntry style={styles.input}
+                                ref={(input) => this.passwordInput = input}
+                                underlineColorAndroid="rgba(0,0,0,0)"
+                            />
+                            <TouchableOpacity 
+                            style={styles.buttoncontainer1}
+                            onPress={() => navigate("Admin", {title: 'welcoen'})}
+                            >
+                            <Text 
+                            onPress={() => navigate("Admin")} 
+                            style={styles.buttonText}>
+                                LOGIN
+                            </Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
             </KeyboardAvoidingView>
         )
@@ -39,5 +70,29 @@ const styles = StyleSheet.create({
         marginTop: 10,
         width: 160,
         textAlign: 'center'
+    },
+    container1: {
+        padding: 20
+    },
+    input: {
+        height: 60,
+        backgroundColor: 'rgba(255,255,255,0.2)',
+        marginBottom: 20,
+        color: '#fff',
+        paddingHorizontal:  10,
+        borderRadius: 35
+    },
+    buttoncontainer1: {
+        backgroundColor: '#e74c3c',
+        paddingVertical: 10,
+        marginBottom: 10,
+        borderRadius: 35,
+        height: 50
+    },
+    buttonText: {
+        textAlign: 'center',
+        color: '#ffffff',
+        fontWeight: '900',
+        fontSize: 20
     }
 });
