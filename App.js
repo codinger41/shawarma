@@ -7,11 +7,11 @@ import Dashboard from './src/screens/Dashboard';
 
 const App = StackNavigator({
   Login: {screen: Login},
-  Dashboard: {screen: Dashboard},
-  
+  Dashboard: {screen: Dashboard}
 },
 {
-  headerMode: 'none'
+  initialRouteName:  'Login',
+  headerMode: 'none',
 });
 
 export default App;
