@@ -1,28 +1,23 @@
 {
-  "name": "Shawarma",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "react-native-scripts": "1.8.1",
-    "jest-expo": "23.0.0",
-    "react-test-renderer": "16.0.0"
-  },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
-  "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
-  },
-  "jest": {
-    "preset": "jest-expo"
-  },
+  "name": "shawarma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
   "dependencies": {
-    "expo": "^23.0.4",
-    "react": "16.0.0",
-    "react-native": "0.50.3",
-    "react-native-vector-icons": "^4.4.2",
-    "react-navigation": "^1.0.0-beta.21"
-  }
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "babel-watch": "^2.0.7",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-watch app.js --require babel-register"
+  },
+  "author": "leksyib",
+  "license": "ISC"
 }
