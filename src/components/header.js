@@ -25,7 +25,7 @@ export default class NavHeader extends Component {
                     <Title style={styles.title} >Dashboard</Title>
                 </Header>
             ) : null
-                    }
+                    }   
             </Container>
 
         )
@@ -38,11 +38,14 @@ const styles = StyleSheet.create({
         marginTop: 15,
         width: 160,
         textAlign: 'center',
-        fontSize: 35
+        fontSize: 35,
+        flex: 1
     },
     navContainer: {
         marginTop: 20,
-        backgroundColor: '#A1887F'
+        backgroundColor: '#A1887F',
+        height: 60,
+        flex: 1
     },
     header: {
         backgroundColor: '#5D4037'
