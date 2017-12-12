@@ -4,7 +4,7 @@ import { Container, Header, Title, Content, Footer, FooterTab, Button, Icon, Tex
 import NavHeader from '../components/header';
 import ContentCards from '../components/cards';
 import { Font } from 'expo';
-
+import Products from '../components/products';
 
 export default class Dashboard extends Component {
   //checking state for if font is loaded or not.
@@ -30,9 +30,10 @@ export default class Dashboard extends Component {
             />
               <Container>
                 <Header style={styles.header}>
-                  <Title style={styles.title}>Header</Title>
+                  <Title style={styles.title}>Dashboard</Title>
                 </Header>
               </Container>
+              <Products/>
               <Footer>
                 <FooterTab  style={styles.footer}>
                   <Button>
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: 15,
-    width: 160,
+    width: 180,
     textAlign: 'center',
     fontSize: 40,
   },
