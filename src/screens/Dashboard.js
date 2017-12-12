@@ -5,6 +5,7 @@ import NavHeader from '../components/header';
 import ContentCards from '../components/cards';
 import { Font } from 'expo';
 import Products from '../components/products';
+import Sales from '../components/sales';
 
 export default class Dashboard extends Component {
   //checking state for if font is loaded or not.
@@ -20,11 +21,11 @@ export default class Dashboard extends Component {
 }
     renderSelectedTab () {
       switch (this.state.selectedTab) {
-        case 'Products':
+        case 'products':
           return (<Products />);
           break;
         case 'sales':
-          return (<Products />);
+          return (<Sales />);
           break;
         case 'new':
           return (<Products />);
@@ -33,6 +34,7 @@ export default class Dashboard extends Component {
           return (<Products />);
           break;
         default:
+        return (<Products />)
       }
     }
 
@@ -46,11 +48,10 @@ export default class Dashboard extends Component {
             <StatusBar
               barStyle="light-content"
             />
-              <Container>
+            
                 <Header style={styles.header}>
                   <Title style={styles.title}>Dashboard</Title>
                 </Header>
-              </Container>
                 <Content>
                   {this.renderSelectedTab()}
                 </Content>
@@ -62,7 +63,7 @@ export default class Dashboard extends Component {
                   </Button>                                                                                                                                                                                                    
                   <Button active={this.state.selectedTab==='sales'} 
                     onPress={() => this.setState({selectedTab: 'sales'})}>
-                    <Text>Sales</Text>
+                    <Text>sales</Text>
                   </Button>
                   <Button active={this.state.selectedTab==='new'} 
                     onPress={() => this.setState({selectedTab: 'new'})}>
@@ -98,5 +99,8 @@ const styles = StyleSheet.create({
   },
   footer: {
     backgroundColor: '#5D4037',
+  },
+  cont: {
+    height: 20
   }
 })

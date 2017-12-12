@@ -5,6 +5,7 @@
   "devDependencies": {
     "jest-expo": "23.0.0",
     "native-base": "^2.3.5",
+    "react-native-modal": "^4.1.1",
     "react-native-scripts": "1.8.1",
     "react-test-renderer": "16.0.0"
   },
