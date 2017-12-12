@@ -103,5 +103,8 @@ const styles = StyleSheet.create({
   },
   cont: {
     height: 20
+  },
+  button: {
+    backgroundColor: '#A1887F'
   }
 })

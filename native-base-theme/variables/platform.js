@@ -145,7 +145,7 @@ export default {
   tabBarTextSize: platform === "ios" ? 14 : 11,
   activeTab: platform === "ios" ? "#fff" : "#fff",
   sTabBarActiveTextColor: "#fff",
-  tabBarActiveTextColor: platform === "ios" ? "#007aff" : "#fff",
+  tabBarActiveTextColor: platform === "ios" ? "#A1887F" : "#A1887F",
   tabActiveBgColor: platform === "ios" ? "#A1887F" : "#A1887F",
 
   // Tab
