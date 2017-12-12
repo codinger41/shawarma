@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, View} from 'react-native';
-import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text } from 'native-base';
+import { StyleSheet, View, StatusBar} from 'react-native';
+import { Container, Header, Title, Content, Footer, FooterTab, Button, Icon, Text } from 'native-base';
 import NavHeader from '../components/header';
 import ContentCards from '../components/cards';
 import { Font } from 'expo';
@@ -21,38 +21,57 @@ export default class Dashboard extends Component {
 
   render() {
     return (
-            <View>
             <Container>
           {
             this.state.fontLoaded ? (
+            <Container>
+            <StatusBar
+              barStyle="light-content"
+            />
               <Container>
-              <NavHeader/>
-              <Container>
-              <Header />
-              <Content />
+                <Header style={styles.header}>
+                  <Title style={styles.title}>Header</Title>
+                </Header>
+              </Container>
               <Footer>
-                <FooterTab>
+                <FooterTab  style={styles.footer}>
                   <Button>
-                    <Text>Apps</Text>
-                  </Button>
+                    <Text>All products</Text>
+                  </Button>```````````````````````````                                                                                                                                                                                                    
                   <Button>
-                    <Text>Camera</Text>
+                    <Text>Sales</Text>
                   </Button>
                   <Button active>
-                    <Text>Navigate</Text>
+                    <Text>New Product</Text>
                   </Button>
                   <Button>
-                    <Text>Contact</Text>
+                    <Text>Settings</Text>
                   </Button>
                 </FooterTab>
               </Footer>
             </Container>
-            </Container>
             ) : null
                     }   
             </Container>
-            </View>
+            
 
         )
   }
 }
+
+const styles = StyleSheet.create({
+  header: {
+    marginTop: 25,
+    backgroundColor: '#5D4037',
+    height: 60,
+  },
+  title: {
+    marginTop: 15,
+    width: 160,
+    textAlign: 'center',
+    fontSize: 40,
+  },
+  footer: {
+    backgroundColor: '#5D4037',
+  }
+})
