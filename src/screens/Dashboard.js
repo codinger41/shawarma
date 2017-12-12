@@ -35,7 +35,7 @@ export default class Dashboard extends Component {
               </Container>
               <Products/>
               <Footer>
-                <FooterTab  style={styles.footer}>
+                <FooterTab style={styles.footer}>
                   <Button>
                     <Text>All products</Text>
                   </Button>                                                                                                                                                                                                    
