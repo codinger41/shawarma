@@ -18,9 +18,27 @@ export default class Dashboard extends Component {
     //Setting the state to true when font is loaded.
     this.setState({ fontLoaded: true });
 }
+    renderSelectedTab () {
+      switch (this.state.selectedTab) {
+        case 'Products':
+          return (<Products />);
+          break;
+        case 'sales':
+          return (<Products />);
+          break;
+        case 'new':
+          return (<Products />);
+          break;
+          case 'settings':
+          return (<Products />);
+          break;
+        default:
+      }
+    }
 
   render() {
     return (
+      
             <Container>
           {
             this.state.fontLoaded ? (
@@ -33,20 +51,26 @@ export default class Dashboard extends Component {
                   <Title style={styles.title}>Dashboard</Title>
                 </Header>
               </Container>
-              <Products/>
+                <Content>
+                  {this.renderSelectedTab()}
+                </Content>
               <Footer>
                 <FooterTab style={styles.footer}>
-                  <Button>
+                  <Button active={this.state.selectedTab==='products'} 
+                    onPress={() => this.setState({selectedTab: 'products'})}>
                     <Text>All products</Text>
                   </Button>                                                                                                                                                                                                    
-                  <Button>
+                  <Button active={this.state.selectedTab==='sales'} 
+                    onPress={() => this.setState({selectedTab: 'sales'})}>
                     <Text>Sales</Text>
                   </Button>
-                  <Button active>
+                  <Button active={this.state.selectedTab==='new'} 
+                    onPress={() => this.setState({selectedTab: 'new'})}>
                     <Text>New Product</Text>
                   </Button>
-                  <Button>
-                    <Text>Settings</Text>
+                  <Button active={this.state.selectedTab==='settings'} 
+                    onPress={() => this.setState({selectedTab: 'settings'})}>
+                    <Text>Settings</Text> 
                   </Button>
                 </FooterTab>
               </Footer>
