@@ -6,6 +6,7 @@ import ContentCards from '../components/cards';
 import { Font } from 'expo';
 import Products from '../components/products';
 import Sales from '../components/sales';
+import New from '../components/new'
 
 export default class Dashboard extends Component {
   //checking state for if font is loaded or not.
@@ -28,7 +29,7 @@ export default class Dashboard extends Component {
           return (<Sales />);
           break;
         case 'new':
-          return (<Products />);
+          return (<New />);
           break;
           case 'settings':
           return (<Products />);
