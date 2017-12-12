@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View,  StyleSheet, ScrollView, Image } from 'react-native';
+import {View,  StyleSheet, ScrollView, Image, TouchableHighlight } from 'react-native';
 import { Container, Content, Card, CardItem, Thumbnail, Text, Button, Icon } from 'native-base';
 
 let data = [
@@ -50,6 +50,11 @@ export default class Products extends Component {
                     <CardItem style={{ backgroundColor: '#5D4037' }} >
                         <Thumbnail source={data.image} />
                         <Text style={styles.text}>{data.name}</Text>
+                        <Button style={{backgroundColor: '#5D4037',marginLeft: 30}}
+                        > 
+                        <Icon style={{ marginLeft: 80, color: '#fff' }}  name='trash'
+                        />
+                        </Button>
                     </CardItem>
                 }>
             </Card>
