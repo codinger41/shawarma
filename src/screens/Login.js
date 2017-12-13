@@ -17,9 +17,9 @@ export default class Login extends Component {
                             <StatusBar
                                 barStyle="light-content"
                             />
-                            <TextInput 
-                                returnKeyType="next" 
-                                placeholder="Username or Email" 
+                            <TextInput
+                                returnKeyType="next"
+                                placeholder="Username or Email"
                                 style={styles.input}
                                 onSubmitEditing={() => this.passwordInput.focus()}
                                 keyboardType="email-address"
@@ -27,18 +27,18 @@ export default class Login extends Component {
                                 autoCorrect={false}
                                 underlineColorAndroid="rgba(0,0,0,0)"
                             />
-                            <TextInput 
-                                returnKeyType="go" 
-                                placeholder="Password" 
+                            <TextInput
+                                returnKeyType="go"
+                                placeholder="Password"
                                 secureTextEntry style={styles.input}
                                 ref={(input) => this.passwordInput = input}
                                 underlineColorAndroid="rgba(0,0,0,0)"
                             />
-                            <TouchableOpacity 
+                            <TouchableOpacity
                             style={styles.buttoncontainer1}
                             onPress={() => navigate("Dashboard", {title: 'welcoen'})}
                             >
-                            <Text  
+                            <Text
                             style={styles.buttonText}>
                                 LOGIN
                             </Text>
