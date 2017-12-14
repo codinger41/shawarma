@@ -2,44 +2,11 @@ import React, { Component } from 'react';
 import {View,  StyleSheet, ScrollView, Image, TouchableHighlight } from 'react-native';
 import { Container, Content, Card, CardItem, Thumbnail, Text, Button, Icon } from 'native-base';
 
-let data = [
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-    {
-        name: 'Shawarma',
-        image: require('../images/logo.png'),
-    },
-];
+let data;
+    fetch('http://shawarma01.herokuapp.com')  
+    .then(function(response) {
+    return response.json()
+    });
 
 export default class Products extends Component {
     render(){
