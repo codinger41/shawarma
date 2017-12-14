@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', apiRoute)
 
 app.get('/', (req, res) => {
-    res.render('welcome to shawarma&grills!')
+    res.send('welcome to shawarma&grills!')
 })
 
 // connect to database
