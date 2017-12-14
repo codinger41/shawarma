@@ -3,7 +3,7 @@ import {View,  StyleSheet, ScrollView, Image, TouchableHighlight } from 'react-n
 import { Container, Content, Card, CardItem, Thumbnail, Text, Button, Icon } from 'native-base';
 
 let data;
-    fetch('http://shawarma01.herokuapp.com')  
+    fetch('http://shawarma01.herokuapp.com/products')  
     .then(function(response) {
     return response.json()
     });
