@@ -1,32 +1,34 @@
 import express from 'express';
-import bodyParser from 'body-parser';
+import  bodyParser  from 'body-parser';
+import db from './configs/db'
 import mongoose from 'mongoose';
-import db from './config/db';
+import apiRoute from './route/apiRoute';
+
 const app = express();
-require('./routes/productRoutes')(app)
-app.use(bodyParser.urlencoded({ extended: true}));
+
+// to parse req body content
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'welcome to Shawarma&Grills!'
-    });
-});
-// connect to database
-mongoose.connect(db.url);
+app.use('/api', apiRoute)
 
-mongoose.connection.on('error', ()  => {
-    console.log('Could not connect to the database. Exiting now...');
-    process.exit();
-});
-mongoose.connection.once('open', ()  => {
-    console.log('Successfully connected to the database');
+app.post('/', (req, res) => {
+    console.log(req.body.name)
 })
 
-// start server
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-    console.log(`server has started, listening on port ${port}`);
-}); 
+// connect to database
+    mongoose.connect(db.url);
 
-module.exports = app;
+    mongoose.connection.on('error', ()  => {
+        console.log('Could not connect to the database. Exiting now...');
+        process.exit(); 
+    });
+    mongoose.connection.once('open', ()  => {
+        console.log('Successfully connected to the database');
+    })
+
+    // start server
+    const port = process.env.PORT || 5000;
+    app.listen(port, () => {
+        console.log(`server has started, listening on port ${port}`);
+    }); 

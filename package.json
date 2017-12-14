@@ -13,7 +13,10 @@
     "express": "^4.16.2",
     "mongoose": "^4.13.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "babel-watch": "^2.0.7"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-watch app.js --require babel-register"
