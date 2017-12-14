@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api', apiRoute)
 
-app.post('/', (req, res) => {
-    console.log(req.body.name)
+app.get('/', (req, res) => {
+    res.render('welcome to shawarma&grills!')
 })
 
 // connect to database
