@@ -3,6 +3,36 @@ import  { StyleSheet, Image, View, TextInput, TouchableOpacity, Text, StatusBar,
 
 
 export default class New extends Component {
+    constructor(props){
+        super(props)
+    
+        this.state = {
+            name: '',
+            price: '',
+        }
+        this._postProduct = this._postProduct.bind(this);
+    }
+    
+    _postProduct() {
+        if(!this.state.name || !this.state.price){
+            alert('Name and Price cannot be empty!')
+        }else{
+        fetch('https://shawarma01.herokuapp.com/api/products', {  
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: this.state.name,
+                price: this.state.price,
+            })
+        });
+        alert(`${this.state.name} has been added successfully!`)
+    }
+    }
+
+
     render(){
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
@@ -24,6 +54,7 @@ export default class New extends Component {
                         autoCapitalize="none"
                         autoCorrect={false}
                         underlineColorAndroid="rgba(0,0,0,0)"
+                        onChangeText={(text) => this.setState({name:text})}
                     />
                     <TextInput 
                         returnKeyType="next" 
@@ -32,9 +63,11 @@ export default class New extends Component {
                         autoCapitalize="none"
                         autoCorrect={false}
                         underlineColorAndroid="rgba(0,0,0,0)"
+                        onChangeText={(text) => this.setState({price:text})}
                     />
                     <TouchableOpacity 
                     style={styles.buttoncontainer1}
+                    onPress={this._postProduct}
                     >
                     <Text  
                     style={styles.buttonText}>
