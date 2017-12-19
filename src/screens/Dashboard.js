@@ -7,6 +7,7 @@ import { Font } from 'expo';
 import Products from '../components/products';
 import Sales from '../components/sales';
 import New from '../components/new'
+import { renderer } from 'react-test-renderer';
 
 export default class Dashboard extends Component {
   //checking state for if font is loaded or not.
@@ -31,7 +32,7 @@ export default class Dashboard extends Component {
         case 'new':
           return (<New />);
           break;
-          case 'settings':
+        case 'settings':
           return (<Products />);
           break;
         default:
@@ -75,7 +76,7 @@ export default class Dashboard extends Component {
                     <Text>Settings</Text> 
                   </Button>
                 </FooterTab>
-              </Footer>
+              </Footer> 
             </Container>
             ) : null
                     }   

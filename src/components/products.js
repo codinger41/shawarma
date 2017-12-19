@@ -12,6 +12,7 @@ export default class Products extends Component {
             products: []
         }
     }
+    // fetch products array from API as res[]
     componentWillMount() {
         fetch("https://shawarma01.herokuapp.com/api/products")
             .then((res) => res.json())
@@ -25,7 +26,8 @@ export default class Products extends Component {
         }
 
     render(){
-        const Product = this.state.products
+        const Product = this.state.products;
+        const { navigate } = this.props.navigation;
         return(
             <ScrollView style={styles.scroll}>
             <Card style={{ backgroundColor: '#5D4037' }} dataArray={Product}

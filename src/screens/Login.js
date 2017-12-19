@@ -36,7 +36,7 @@ export default class Login extends Component {
                             />
                             <TouchableOpacity
                             style={styles.buttoncontainer1}
-                            onPress={() => navigate("Dashboard", {title: 'welcoen'})}
+                            onPress={() => navigate("Dashboard", {title: 'welcome'})}
                             >
                             <Text
                             style={styles.buttonText}>
