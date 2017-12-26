@@ -1,7 +1,11 @@
 ## Shawarma Inventory Management system
-    This App was built just for management of sales with different products.
+This App was built just for management of sales with different products.
+
 <img src="screenshot.jpeg" style="align: center" >
+
+
 ## Features
+
 <ul>
     <li>Addition of New Products</li>
     <li>Editing/Updating Products</li>
